@@ -1,5 +1,5 @@
 {
-  "name": "remix-auth-app",
+  "name": "remix-supabase-boilerplate",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -8,19 +8,25 @@
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "db:generate-types": "supabase gen types typescript --project-id fitqdmfnubqcdwwedxum > app/types/database.types.ts"
   },
   "dependencies": {
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
     "@supabase/supabase-js": "^2.39.7",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.0",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",
+    "@types/bcryptjs": "^2.4.6",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.19",
